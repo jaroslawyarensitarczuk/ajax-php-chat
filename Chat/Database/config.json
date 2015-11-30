@@ -1,0 +1,7 @@
+{
+    "host" : "localhost",
+    "charset" : "utf8",
+    "name" : "chat",
+    "user" : "root",
+    "password" : "root"
+}
