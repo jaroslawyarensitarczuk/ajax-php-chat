@@ -1,9 +1,13 @@
-<?php
-require __DIR__ . '/vendor/autoload.php';
+<!DOCTYPE html>
+<html lang="pl">
 
-use Yaren\Chat\Database\Model;
-use Yaren\Core\JsonDecoder as JSON;
+    <head>
+        <meta charset="utf-8">
+        <title>ChatBox</title>
+    </head>
 
-$jsonDecoder = new JSON();
-$model = new Model($jsonDecoder);
+    <body>
+        <h1>Lorem ipsum...</h1>
+    </body>
 
+</html>

@@ -23,4 +23,18 @@ class Model {
             echo $error->getMessage();
         }
     }
+
+    public function insertMessage($message, $author) {
+        $now = date('H:i:s');
+        $query = $this->pdo->prepare("INSERT INTO messages(author, sendTime, message) VALUES(?, ?, ?)");
+        $query->bindParam(1, $author);
+        $query->bindParam(2, $now);
+        $query->bindParam(3, $message);
+        $query->execute();
+    }
+
+    public function getMessages() {
+        $query = $this->pdo->query('SELECT * FROM messages ORDER BY ID DESC LIMIT 20');
+        return $query->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
